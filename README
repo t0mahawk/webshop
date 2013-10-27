@@ -202,10 +202,9 @@ pre > code {
 <body>
 <h2>microbitcoin</h2>
 
-<p><a href="https://github.com/pierrenoizat/webshop.git">https://github.com/pierrenoizat/webshop.git</a></p>
 
-<p>Micro web shop accepting payments in bitcoin or other payment options.
-I developped microbitcoin.net in RoR (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shop keeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option.</p>
+<p>Microbitcoin is a web shop application accepting payments in bitcoin or other payment options.
+I developped microbitcoin.net in Ruby on Rails (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shop keeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option.</p>
 
 <h4>Who should use microbitcoin?</h4>
 
