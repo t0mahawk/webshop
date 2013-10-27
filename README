@@ -231,9 +231,9 @@ Prices are set in bitcoin and shippig costs are set in fiat currency (e.g. euros
 <h4>Usage</h4>
 
 <ol>
-<li><p>Download and install your electrum wallet application from electrum.org
-Install Rails 3 (upgrade to Rails 4 is on the TO DO list)
-Install postgreSQL database</p></li>
+<li>Download and install your electrum wallet application from electrum.org</li>
+<li>Install Rails 3 (upgrade to Rails 4 is on the TO DO list)</li>
+<li><p>Install postgreSQL database</p></li>
 <li><p>$ git clone <a href="https://github.com/pierrenoizat/webshop.git">https://github.com/pierrenoizat/webshop.git</a></p></li>
 <li><p>$ bundle install</p></li>
 <li><p>Edit config/application.rb file to enter your own electrum wallet master public key (export master public key from your electrum wallet) as $MPK global variable.</p></li>
@@ -248,8 +248,8 @@ user = User.create(:name =&gt; &quot;Pierre&quot;, :password =&gt; &quot;passwor
 create a postgres database and run $ rake db:seed
 to create an admin user</p></li>
 <li><p>$ rails server</p></li>
-<li><p>Visit localhost:3000, start browsing the catalog and shopping..
-Fork the code to go after the TO DO features.</p></li>
+<li><p>Visit localhost:3000, start browsing the catalog and shopping..</p></li>
+<li><p>Fork the code to go after the TO DO features.</p></li>
 </ol>
 
 <h4>TO DO:</h4>
