@@ -202,8 +202,10 @@ pre > code {
 <body>
 <h2>microbitcoin</h2>
 
-<p>Microbitcoin is a web shop application accepting payments in bitcoin or other payment options.
-I developped microbitcoin.net in Ruby on Rails (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shop keeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option.</p>
+<p><a href="https://github.com/pierrenoizat/webshop.git">https://github.com/pierrenoizat/webshop.git</a></p>
+
+<p>Micro web shop accepting payments in bitcoin or other payment options.
+I developped <a href="http://microbitcoin.net">microbitcoin.net</a> in RoR (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shop keeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option.</p>
 
 <h4>Who should use microbitcoin?</h4>
 
@@ -229,9 +231,9 @@ Prices are set in bitcoin and shippig costs are set in fiat currency (e.g. euros
 <h4>Usage</h4>
 
 <ol>
-<li>Download and install your electrum wallet application from electrum.org</li>
-<li>Install Rails 3 (upgrade to Rails 4 is on the TO DO list)</li>
-<li><p>Install postgreSQL database</p></li>
+<li><p>Download and install your electrum wallet application from electrum.org
+Install Rails 3 (upgrade to Rails 4 is on the TO DO list)
+Install postgreSQL database</p></li>
 <li><p>$ git clone <a href="https://github.com/pierrenoizat/webshop.git">https://github.com/pierrenoizat/webshop.git</a></p></li>
 <li><p>$ bundle install</p></li>
 <li><p>Edit config/application.rb file to enter your own electrum wallet master public key (export master public key from your electrum wallet) as $MPK global variable.</p></li>
@@ -246,8 +248,8 @@ user = User.create(:name =&gt; &quot;Pierre&quot;, :password =&gt; &quot;passwor
 create a postgres database and run $ rake db:seed
 to create an admin user</p></li>
 <li><p>$ rails server</p></li>
-<li><p>Visit localhost:3000, start browsing the catalog and shopping..</p></li>
-<li><p>Fork the code to go after the TO DO features.</p></li>
+<li><p>Visit http://localhost:3000, start browsing the catalog and shopping..
+Fork the code to go after the TO DO features.</p></li>
 </ol>
 
 <h4>TO DO:</h4>
@@ -256,7 +258,7 @@ to create an admin user</p></li>
 <li>pretty css with bootstrap</li>
 <li>add instant payment receive notification to sell digital goods (download links).</li>
 <li>develop test</li>
-<li>make javascript work with IE.</li>
+<li>make javascript work with IE. Some visual effects are not displayed with IE while they work ok with real web browsers like Firefox, Chrome or Safari.</li>
 <li>add quantity increment/decrement to cart functionnality. Right now only &quot;add one to cart&quot; and &quot;empty cart&quot; buttons are present.</li>
 <li>add bank card payment options. Right now only bitcoins and checks appear in the payment option list.</li>
 <li>display VAT amount in invoices</li>
@@ -266,7 +268,7 @@ to create an admin user</p></li>
 
 <h5>More on preventing man-in-the-middle attacks</h5>
 
-<p>Publish the master public key on several social networks and key servers: this will allow your customers to check that the address belongs to you before paying your invoice (see bitcoinrad.io for details). This is not a requirement but its a sure and simple way to mitigate the risk of a man-in-the-middle attack on your bitcoin payment addresses. Knowing your master public key will allow also the taxman and your competitors to track your bitcoin revenues but this is the price to pay for ultimate security. If you are not comfortable with this level of transparency, then the audit server (see TO DO list) keeps your sales figures private while achieving ultimate security at the cost of an additionnal server.</p>
+<p>Publish the master public key on several social networks and key servers: this will allow your customers to check that the address belongs to you before paying your invoice (see bitcoinrad.io for details). This is not a requirement but its a sure and simple way to mitigate the risk of a man-in-the-middle attack on your bitcoin payment addresses. Knowing your master public key will allow also the taxman and your competitors to track your bitcoin revenues but this is the price to pay for ultimate security. Bear in mind that your bitcoin sales are probably only a fraction of your sales since you offer several payment options. If you are not comfortable with this level of transparency, then the audit server (see TO DO list) keeps your bitcoin sales figures private while achieving ultimate security at the cost of an additionnal server.</p>
 
 <h4>Thanks and Credits</h4>
 
@@ -282,7 +284,7 @@ to create an admin user</p></li>
 
 <p>Dave Thomas</p>
 
-<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp</p>
+<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp. Donations help me cover the costs of hosting microbitcoin.net.</p>
 
 </body>
 </html>
