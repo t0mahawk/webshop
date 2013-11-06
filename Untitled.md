@@ -284,7 +284,7 @@ Fork the code to go after the TO DO features.</p></li>
 
 <p>Dave Thomas</p>
 
-<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp. Donations help me cover the costs of hosting microbitcoin.net.</p>
+<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp. Donations help me cover the cost of hosting microbitcoin.net.</p>
 
 </body>
 </html>
