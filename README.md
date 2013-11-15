@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -202,10 +201,10 @@ pre > code {
 <body>
 <h2>microbitcoin</h2>
 
-<p><a href="https://github.com/pierrenoizat/webshop.git">https://github.com/pierrenoizat/webshop.git</a></p>
 
-<p>Micro web shop accepting payments in bitcoin or other payment options.
-I developped <a href="http://microbitcoin.net">microbitcoin.net</a> in RoR (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shop keeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option.</p>
+
+<p>Micro webshop accepting payments in bitcoin and other payment options.
+I developped <a href="http://microbitcoin.net">microbitcoin.net</a> in RoR (Rails 3) starting from Dave Thomas awesome tutorial &quot;Agile Web Development in Rails&quot;. It shows a bitcoin cart/checkout (allowing other payment methods) with email notification, bitcoin uri qrcode, pdf invoice download etc.. A new bitcoin address is generated for each transaction. The app comes with full admin capability to create and update a product catalog. I integrated a deterministic bitcoin wallet so that the shopkeeper can use a regular electrum wallet to watch payments while the web server is not holding any private key. The seed of the electrum wallet can be safely kept offline.The app knows only the master public key of the wallet to generate bitcoin addresses: this is the safest option for a webshop accepting bitcoin payments.</p>
 
 <h4>Who should use microbitcoin?</h4>
 
@@ -225,7 +224,7 @@ Prices are set in bitcoin and shippig costs are set in fiat currency (e.g. euros
 <li>Sidebar navigation with custom css (no bootstrap).</li>
 <li>Static pages: FAQ, Shipping conditions, etc</li>
 <li>Locale switch (flags)</li>
-<li>No third party service is called except blcokchain.info for payment receive notifications and bitcoincharts for current exchange rate. Default rate can be set in config file.</li>
+<li>No third party service is called except blockchain.info for payment receive notifications and bitcoincharts for current exchange rate. Default rate can be set in config file.</li>
 </ul>
 
 <h4>Usage</h4>
@@ -244,9 +243,7 @@ Digest::SHA2.hexdigest(password + &quot;wibble&quot; + salt)</p></li>
 config.action<em>mailer.perform</em>deliveries = false</p></li>
 <li><p>Edit db/seeds.rb to enter your user name and password for the postgreSQL database in
 user = User.create(:name =&gt; &quot;Pierre&quot;, :password =&gt; &quot;password&quot;, :password_confirmation =&gt; &quot;password&quot;)</p></li>
-<li><p>Open a terminal console:
-create a postgres database and run $ rake db:seed
-to create an admin user</p></li>
+<li><p>$ rake db:setup</p></li>
 <li><p>$ rails server</p></li>
 <li><p>Visit http://localhost:3000, start browsing the catalog and shopping..
 Fork the code to go after the TO DO features.</p></li>
@@ -258,11 +255,11 @@ Fork the code to go after the TO DO features.</p></li>
 <li>pretty css with bootstrap</li>
 <li>add instant payment receive notification to sell digital goods (download links).</li>
 <li>develop test</li>
-<li>make javascript work with IE. Some visual effects are not displayed with IE while they work ok with real web browsers like Firefox, Chrome or Safari.</li>
+<li>make javascript work with IE. Some visual effects are not displayed properly with IE while they work fine with real web browsers like Firefox, Chrome or Safari.</li>
 <li>add quantity increment/decrement to cart functionnality. Right now only &quot;add one to cart&quot; and &quot;empty cart&quot; buttons are present.</li>
 <li>add bank card payment options. Right now only bitcoins and checks appear in the payment option list.</li>
 <li>display VAT amount in invoices</li>
-<li>develop an audit server that will periodically visit the shop to generate a bitcoin address: the audit server can then check that the address belongs to the wallet and send an alert if there is a mismatch. The audit server needs only the master public key of the wallet. The audit server makes it harder to tamper with the payment addresses: both the audit server and the webshop app server must be compromised simultaneously to tamper with the master public key, Right now, the security check can be performed manually by the shop keeper or by the shopper using bitcoinrad.io (another web app I developped as a security feature: see bitcoinrad.io website).</li>
+<li>develop an audit server that will periodically visit the shop to generate a bitcoin address: the audit server can then check that the address belongs to the wallet and send an alert if there is a mismatch. The audit server needs only the master public key of the wallet. The audit server makes it harder to tamper with the payment addresses: both the audit server and the webshop app server must be compromised simultaneously to tamper with the master public key, Right now, the security check can be performed manually by the shop keeper or by the shopper using bitcoinrad.io (another web app I developped as a security feature: see <a href="http://www.bitcoinrad.io">bitcoinrad.io</a> website).</li>
 <li>Update to Rails 4</li>
 </ul>
 
@@ -284,7 +281,7 @@ Fork the code to go after the TO DO features.</p></li>
 
 <p>Dave Thomas</p>
 
-<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp. Donations help me cover the cost of hosting microbitcoin.net.</p>
+<p>Donations welcome to 1GzN629RXup74eT1LsddKgnKvMtkS1ULHp. Donations help me cover the costs of hosting microbitcoin.net.</p>
 
 </body>
 </html>
